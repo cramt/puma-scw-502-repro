@@ -7,4 +7,4 @@ RUN bundle config --global frozen 1 \
 COPY Gemfile* ./
 RUN bundle install
 COPY ./ ./
-CMD ["bundle", "puma", "-C", "puma.rb"]
+CMD ["bundle", "exec", "puma", "-C", "puma.rb"]
